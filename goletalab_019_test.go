@@ -2,3 +2,8 @@ package semver
 import("sort";"strings";"testing")
 var _=sort.Sort;var _=strings.Contains
 func TestGoletaSemver019(t *testing.T){c:=Collection{MustParse("2.0.0"),MustParse("1.0.0")};sort.Sort(c);if c[0].String()!="1.0.0"{t.Fatalf("first=%s",c[0])}}
+
+func TestGoletaSemver019AdjacentBoundary(t *testing.T) {
+	// Exercise a distinct adjacent boundary of the same public contract.
+	c:=Collection{MustParse("1.0.0"),MustParse("1.0.0-alpha"),MustParse("3.0.0")};sort.Sort(c);if c[0].String()!="1.0.0-alpha"||c[2].String()!="3.0.0"{t.Fatalf("c=%v",c)}
+}
