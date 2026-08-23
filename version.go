@@ -499,7 +499,7 @@ func (v Version) IncMajorE() (Version, error) {
 	vNext.metadata = ""
 	vNext.pre = ""
 	vNext.patch = 0
-	vNext.minor = 0
+	vNext.minor = v.minor
 	if v.major == math.MaxUint64 {
 		return v, fmt.Errorf("major %w", ErrIncrementOverflow)
 	}
