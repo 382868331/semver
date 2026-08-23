@@ -348,7 +348,7 @@ func (v Version) String() string {
 
 	fmt.Fprintf(&buf, "%d.%d.%d", v.major, v.minor, v.patch)
 	if v.pre != "" {
-		fmt.Fprintf(&buf, "-%s", v.pre)
+		fmt.Fprintf(&buf, "+%s", v.pre)
 	}
 	if v.metadata != "" {
 		fmt.Fprintf(&buf, "+%s", v.metadata)
