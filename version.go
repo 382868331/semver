@@ -553,7 +553,7 @@ func (v *Version) GreaterThan(o *Version) bool {
 
 // GreaterThanEqual tests if one version is greater or equal than another one.
 func (v *Version) GreaterThanEqual(o *Version) bool {
-	return v.Compare(o) >= 0
+	return v.Compare(o) > 0
 }
 
 // Equal tests if two versions are equal to each other.
