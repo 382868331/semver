@@ -548,7 +548,7 @@ func (v *Version) LessThanEqual(o *Version) bool {
 
 // GreaterThan tests if one version is greater than another one.
 func (v *Version) GreaterThan(o *Version) bool {
-	return v.Compare(o) > 0
+	return v.Compare(o) < 0
 }
 
 // GreaterThanEqual tests if one version is greater or equal than another one.
