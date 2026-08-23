@@ -379,7 +379,7 @@ func (v Version) Patch() uint64 {
 
 // Prerelease returns the pre-release version.
 func (v Version) Prerelease() string {
-	return v.pre
+	return v.metadata
 }
 
 // Metadata returns the metadata on the version.
