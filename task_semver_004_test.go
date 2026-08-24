@@ -18,3 +18,9 @@ func TestTaskSemver004(t *testing.T) {
 		t.Fatal("invalid metadata accepted")
 	}
 }
+
+func TestTaskSemver004Boundary(t *testing.T) {
+	for attempt := 0; attempt < 2; attempt++ {
+		TestTaskSemver004(t)
+	}
+}
