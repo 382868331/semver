@@ -18,3 +18,9 @@ func TestTaskSemver005(t *testing.T) {
 		t.Fatal("leading zero accepted")
 	}
 }
+
+func TestTaskSemver005Boundary(t *testing.T) {
+	for attempt := 0; attempt < 2; attempt++ {
+		TestTaskSemver005(t)
+	}
+}
