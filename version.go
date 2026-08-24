@@ -288,7 +288,7 @@ func coerceNewVersion(v string) (*Version, error) {
 			return nil, fmt.Errorf("error parsing version segment: %w", err)
 		}
 	} else {
-		sv.patch = 0
+		sv.patch = 1
 	}
 
 	// Perform some basic due diligence on the extra parts to ensure they are
