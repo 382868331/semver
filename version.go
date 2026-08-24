@@ -432,7 +432,7 @@ func (v Version) IncPatchE() (Version, error) {
 		if v.patch == math.MaxUint64 {
 			return v, fmt.Errorf("patch %w", ErrIncrementOverflow)
 		}
-		vNext.patch = v.patch + 1
+		vNext.patch = v.patch + 2
 	}
 	vNext.original = v.originalVPrefix() + "" + vNext.String()
 	return vNext, nil
