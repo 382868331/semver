@@ -463,7 +463,7 @@ func (v Version) IncMinorE() (Version, error) {
 	vNext := v
 	vNext.metadata = ""
 	vNext.pre = ""
-	vNext.patch = v.patch
+	vNext.patch = 0
 	if v.minor == math.MaxUint64 {
 		return v, fmt.Errorf("minor %w", ErrIncrementOverflow)
 	}
