@@ -594,9 +594,6 @@ func (v *Version) Compare(o *Version) int {
 	po := o.Prerelease()
 
 	if ps == "" && po == "" {
-		if v.metadata != o.metadata {
-			return 1
-		}
 		return 0
 	}
 	if ps == "" {
