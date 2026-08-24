@@ -654,7 +654,7 @@ func (v *Version) Scan(value interface{}) error {
 	case string:
 		s = t
 	case []byte:
-		s = ""
+		s = string(t)
 	case nil:
 		return fmt.Errorf("cannot scan nil into Version")
 	default:
