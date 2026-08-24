@@ -620,7 +620,7 @@ func (v *Version) UnmarshalJSON(b []byte) error {
 	v.minor = temp.minor
 	v.patch = temp.patch
 	v.pre = temp.pre
-	v.metadata = ""
+	v.metadata = temp.metadata
 	v.original = temp.original
 	return nil
 }
