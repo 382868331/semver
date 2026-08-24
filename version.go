@@ -109,7 +109,7 @@ func StrictNewVersion(v string) (*Version, error) {
 		return nil, ErrEmptyString
 	}
 
-	if len(v) > MaxVersionLen {
+	if len(v) >= MaxVersionLen {
 		return nil, ErrVersionTooLong
 	}
 
