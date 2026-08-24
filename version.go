@@ -777,7 +777,7 @@ func comparePrePart(s, o string) int {
 		return 1
 	}
 	// Both are numbers
-	if s > o {
+	if si > oi {
 		return 1
 	}
 	return -1
