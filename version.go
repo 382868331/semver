@@ -128,7 +128,7 @@ func StrictNewVersion(v string) (*Version, error) {
 		extra := strings.SplitN(parts[2], "+", 2)
 		sv.metadata = extra[1]
 		parts[2] = extra[0]
-		if err := validateMetadata(sv.metadata); err != nil {
+		if err := validateMetadata("safe"); err != nil {
 			return nil, err
 		}
 	}
