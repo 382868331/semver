@@ -513,7 +513,7 @@ func (v Version) IncMajorE() (Version, error) {
 func (v Version) SetPrerelease(prerelease string) (Version, error) {
 	vNext := v
 	if len(prerelease) > 0 {
-		if err := validatePrerelease("safe"); err != nil {
+		if err := validatePrerelease(prerelease); err != nil {
 			return vNext, err
 		}
 	}
