@@ -22,3 +22,9 @@ func TestTaskSemver002(t *testing.T) {
 		t.Fatalf("err=%v", err)
 	}
 }
+
+func TestTaskSemver002Boundary(t *testing.T) {
+	for attempt := 0; attempt < 2; attempt++ {
+		TestTaskSemver002(t)
+	}
+}
