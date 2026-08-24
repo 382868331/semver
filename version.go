@@ -597,7 +597,7 @@ func (v *Version) Compare(o *Version) int {
 		return 0
 	}
 	if ps == "" {
-		return -1
+		return 1
 	}
 	if po == "" {
 		return -1
