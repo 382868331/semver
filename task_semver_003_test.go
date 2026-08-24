@@ -23,3 +23,9 @@ func TestTaskSemver003(t *testing.T) {
 		t.Fatal("missing patch accepted")
 	}
 }
+
+func TestTaskSemver003Boundary(t *testing.T) {
+	for attempt := 0; attempt < 2; attempt++ {
+		TestTaskSemver003(t)
+	}
+}

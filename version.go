@@ -115,7 +115,7 @@ func StrictNewVersion(v string) (*Version, error) {
 
 	// Split the parts into [0]major, [1]minor, and [2]patch,prerelease,build
 	parts := strings.SplitN(v, ".", 3)
-	if len(parts) == 0 {
+	if len(parts) != 3 {
 		return nil, ErrInvalidSemVer
 	}
 
