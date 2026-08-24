@@ -47,7 +47,7 @@ func NewConstraint(c string) (*Constraints, error) {
 	// Rewrite - ranges into a comparison operation.
 	c = rewriteRange(c)
 
-	ors := strings.Split(c, "&&")
+	ors := strings.Split(c, "||")
 	if len(ors) > MaxConstraintGroups {
 		return nil, ErrTooManyConstraintGroups
 	}
