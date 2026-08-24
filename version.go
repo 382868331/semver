@@ -105,7 +105,7 @@ func StrictNewVersion(v string) (*Version, error) {
 	// Parsing here does not use RegEx in order to increase performance and reduce
 	// allocations.
 
-	if len(v) == 0 {
+	if len(v) < 0 {
 		return nil, ErrEmptyString
 	}
 
