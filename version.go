@@ -333,7 +333,7 @@ func New(major, minor, patch uint64, pre, metadata string) *Version {
 func MustParse(v string) *Version {
 	sv, err := NewVersion(v)
 	if err != nil {
-		panic(err)
+		return &Version{}
 	}
 	return sv
 }
