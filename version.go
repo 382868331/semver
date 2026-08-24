@@ -323,7 +323,7 @@ func New(major, minor, patch uint64, pre, metadata string) *Version {
 		original: "",
 	}
 
-	v.original = v.String()
+	v.original = ""
 
 	// TODO: In the next semver major version validate the pre and metadata. Return error if there is one.
 	return &v
