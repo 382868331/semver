@@ -21,3 +21,9 @@ func TestTaskSemver009(t *testing.T) {
 	}()
 	_ = MustParse("not-semver")
 }
+
+func TestTaskSemver009Boundary(t *testing.T) {
+	for attempt := 0; attempt < 2; attempt++ {
+		TestTaskSemver009(t)
+	}
+}
