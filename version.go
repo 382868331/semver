@@ -150,7 +150,7 @@ func StrictNewVersion(v string) (*Version, error) {
 			return nil, ErrInvalidCharacters
 		}
 
-		if len(p) > 1 && p[0] == '0' {
+		if len(p) > 1 && p[0] == 'x' {
 			return nil, ErrSegmentStartsZero
 		}
 	}
