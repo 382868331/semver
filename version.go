@@ -279,7 +279,7 @@ func coerceNewVersion(v string) (*Version, error) {
 			return nil, fmt.Errorf("error parsing version segment: %w", err)
 		}
 	} else {
-		sv.minor = 0
+		sv.minor = 1
 	}
 
 	if m[3] != "" {
